@@ -45,14 +45,6 @@ final class HautelookAliceExtension extends Extension
                 )
             );
         }
-        if (false === array_key_exists('Doctrine\Bundle\DoctrineBundle\DoctrineBundle', $bundles)) {
-            throw new LogicException(
-                sprintf(
-                    'Cannot register "%s" without "Doctrine\Bundle\DoctrineBundle\DoctrineBundle".',
-                    HautelookAliceBundle::class
-                )
-            );
-        }
 
         $this->loadConfig($configs, $container);
         $this->loadServices($container);
