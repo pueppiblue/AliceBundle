@@ -39,13 +39,13 @@
     },
     "require-dev": {
         "doctrine/data-fixtures": "^1.2",
-        "doctrine/doctrine-bundle": "^1.6.8",
         "doctrine/common": "^2.7.2",
         "doctrine/orm": "^2.5.6",
         "phpunit/phpunit": "^6.0",
         "symfony/symfony": "^3.3.10 || ^4.0",
         "symfony/phpunit-bridge": "^3.3",
-        "phpspec/prophecy": "^1.7"
+        "phpspec/prophecy": "^1.7",
+        "doctrine/doctrine-bundle": "^1.8"
     },
     "suggest": {
         "theofidry/alice-bundle-extension": "Behat extension for HautelookAliceBundle"
