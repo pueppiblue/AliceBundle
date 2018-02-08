@@ -30,12 +30,12 @@ final class DoctrineOrmMissingBundleInformationCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
 
-        $io->writeln([
-            'Attention',
-            '============',
-            '',
-            'No ORM bridge has been installed. Please install one to be able to use this command.',
-            'See https://github.com/hautelook/AliceBundle#installation for more information.'
-        ]);
+        $io->error(
+            "Attention\n" .
+            "============\n" .
+            "No ORM bridge has been installed. Please install one to be able to use this command.\n" .
+            "See https://github.com/hautelook/AliceBundle#installation for more information."
+        );
+
     }
 }
