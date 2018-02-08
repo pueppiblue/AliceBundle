@@ -31,11 +31,11 @@
     },
 
     "require": {
-        "php": "^7.1",
         "nelmio/alice": "^3.1",
+        "php": "^7.1",
+        "psr/log": "^1.0",
         "symfony/finder": "^3.3 || ^4.0",
-        "theofidry/alice-data-fixtures": "^1.0",
-        "psr/log": "^1.0"
+        "theofidry/alice-data-fixtures": "^1.0"
     },
     "require-dev": {
         "doctrine/common": "^2.7.2",
