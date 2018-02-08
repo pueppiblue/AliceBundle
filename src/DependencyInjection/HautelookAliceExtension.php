@@ -11,7 +11,9 @@
 
 namespace Hautelook\AliceBundle\DependencyInjection;
 
+use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Faker\Provider\Base;
+use Fidry\AliceDataFixtures\Bridge\Symfony\FidryAliceDataFixturesBundle;
 use Hautelook\AliceBundle\Console\Command\Doctrine\DoctrineOrmMissingBundleInformationCommand;
 use Hautelook\AliceBundle\HautelookAliceBundle;
 use LogicException;
@@ -39,7 +41,7 @@ final class HautelookAliceExtension extends Extension
     {
         $bundles = array_flip($container->getParameter('kernel.bundles'));
 
-        if (false === array_key_exists('Fidry\AliceDataFixtures\Bridge\Symfony\FidryAliceDataFixturesBundle', $bundles)) {
+        if (false === array_key_exists(FidryAliceDataFixturesBundle::class, $bundles)) {
             throw new LogicException(
                 sprintf(
                     'Cannot register "%s" without "Fidry\AliceDataFixtures\Bridge\Symfony\FidryAliceDataFixturesBundle".',
@@ -51,7 +53,7 @@ final class HautelookAliceExtension extends Extension
         $this->loadConfig($configs, $container);
         $this->loadServices($container);
 
-        if (false === array_key_exists('Doctrine\Bundle\DoctrineBundle\DoctrineBundle', $bundles)) {
+        if (false === array_key_exists(DoctrineBundle::class, $bundles)) {
 
             $container->removeDefinition('hautelook_alice.console.command.doctrine.doctrine_orm_load_data_fixtures_command');
 
