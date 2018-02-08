@@ -10,9 +10,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\HttpKernel\Kernel;
 
 /**
- * Class WithoutDoctrineKernel
  * @package Hautelook\AliceBundle\Functional
- * @author Dennis Langen <dennis.langen@i22.de>
+ * @author Dennis Langen <langendennis81@gmail.com>
  */
 class WithoutDoctrineKernel extends Kernel
 {

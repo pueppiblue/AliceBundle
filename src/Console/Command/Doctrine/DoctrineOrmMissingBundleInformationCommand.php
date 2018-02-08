@@ -8,9 +8,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class DoctrineOrmMissingBundleInformationCommand
  * @package Hautelook\AliceBundle\Console\Command\Doctrine
- * @author Dennis Langen <dennis.langen@i22.de>
+ * @author Dennis Langen <langendennis81@gmail.com>
  */
 final class DoctrineOrmMissingBundleInformationCommand extends Command
 {
