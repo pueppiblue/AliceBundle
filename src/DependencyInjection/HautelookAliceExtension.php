@@ -63,10 +63,13 @@ final class HautelookAliceExtension extends Extension
             $container->setDefinition('hautelook_alice.console.command.doctrine.doctrine_orm_bundle_missing_command', $definition);
         }
 
+        // TODO: remove it in the future as we bump the minimal requirement of nelmio/alice
         // Register autoconfiguration rules for Symfony DI 3.3+
         if (method_exists($container, 'registerForAutoconfiguration')) {
-            $container->registerForAutoconfiguration(Base::class)
-                ->addTag('nelmio_alice.faker.provider');
+            if ( 0 === count($container->findTaggedServiceIds('nelmio_alice.faker.provider')) ) {
+                $container->registerForAutoconfiguration(Base::class)
+                    ->addTag('nelmio_alice.faker.provider');
+            }
         }
     }
 
