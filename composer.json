@@ -38,7 +38,7 @@
         "theofidry/alice-data-fixtures": "^1.0"
     },
     "require-dev": {
-        "doctrine/common": "^2.7.2",
+        "doctrine/common": "2.8.1",
         "doctrine/data-fixtures": "^1.2",
         "doctrine/doctrine-bundle": "^1.8",
         "doctrine/orm": "^2.5.6",
